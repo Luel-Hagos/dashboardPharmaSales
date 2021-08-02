@@ -7,27 +7,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import bisect
-
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestRegressor
-from sklearn import preprocessing
-from sklearn.model_selection import KFold
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import mean_squared_error
-from sklearn.svm import SVR
-from sklearn.metrics import r2_score
-
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, LSTM
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
-
-
 from datetime import datetime
-import mlflow
-
-import logging
-import pickle
 
 st.set_page_config('Dashboard', layout="wide")
 st.title('Pharmaceutical Sales prediction across multiple stores') 
@@ -141,4 +121,3 @@ def cor(c):
 st.title('Analysis')
 c = st.selectbox('select correlation', ('promo and sales', 'promo, customers and sales', 'sales and number of customers'))
 cor(c)
-
